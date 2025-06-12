@@ -1,6 +1,6 @@
 # 📊 Service Tracker – Service Request Analysis Dashboard
 
-**Service Tracker** is an interactive data analytics dashboard designed to help roadside assistance companies (like Shagrir) analyze, visualize, and gain insights from their service request data.
+**Service Tracker** is an interactive data analytics dashboard designed to help roadside assistance companies analyze, visualize, and gain insights from their service request data.
 
 The project was built as a real-world use case to demonstrate how organizations can turn raw operational data into business intelligence that supports faster decision-making, improves customer satisfaction, and increases efficiency in the field.
 
