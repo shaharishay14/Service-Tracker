@@ -185,6 +185,79 @@ def create_volume_chart(df, time_unit='day'):
     
     return fig
 
+def create_map_visualization(df):
+    """
+    יוצר מפה אינטראקטיבית המציגה את מיקומי בקשות השירות
+    
+    Args:
+        df (pd.DataFrame): נתוני בקשות השירות עם קואורדינטות
+    
+    Returns:
+        plotly.graph_objects.Figure: מפה אינטראקטיבית
+    """
+    # יצירת צבעים לפי סוג תקלה
+    color_map = {
+        'בטריה': '#FF6B6B',
+        'פנצ\'ר': '#4ECDC4', 
+        'תקלת מנוע': '#45B7D1',
+        'נגמר דלק': '#96CEB4',
+        'מפתח נעול ברכב': '#FFEAA7',
+        'תקלת חשמל': '#DDA0DD',
+        'תאונה קלה': '#FFB347'
+    }
+    
+    # הכנת הנתונים למפה
+    df_map = df.copy()
+    df_map['color'] = df_map['issue_type'].map(color_map)
+    df_map['size'] = df_map['response_time_minutes'].apply(lambda x: max(8, min(20, x/10)))  # גודל לפי זמן מענה
+    
+    # יצירת טקסט hover מפורט
+    df_map['hover_text'] = (
+        '<b>' + df_map['id'] + '</b><br>' +
+        'אזור: ' + df_map['region'] + '<br>' +
+        'סוג תקלה: ' + df_map['issue_type'] + '<br>' +
+        'סטטוס: ' + df_map['status'] + '<br>' +
+        'זמן מענה: ' + df_map['response_time_minutes'].round(1).astype(str) + ' דקות<br>' +
+        'נפתח: ' + df_map['opened_at'].dt.strftime('%d/%m/%Y %H:%M')
+    )
+    
+    fig = px.scatter_mapbox(
+        df_map,
+        lat='latitude',
+        lon='longitude',
+        color='issue_type',
+        size='size',
+        hover_name='id',
+        hover_data={
+            'region': True,
+            'issue_type': True,
+            'status': True,
+            'response_time_minutes': ':.1f',
+            'latitude': False,
+            'longitude': False,
+            'size': False
+        },
+        color_discrete_map=color_map,
+        title="מפת בקשות שירות - מיקום גיאוגרפי",
+        mapbox_style="open-street-map",
+        zoom=7,
+        center={"lat": 31.5, "lon": 34.8},  # מרכז ישראל
+        height=600
+    )
+    
+    fig.update_layout(
+        font=dict(size=12),
+        legend=dict(
+            orientation="v",
+            yanchor="top",
+            y=1,
+            xanchor="left",
+            x=1.02
+        )
+    )
+    
+    return fig
+
 def create_sidebar_filters(df):
     """
     יוצר פילטרים בסרגל הצד
@@ -308,15 +381,46 @@ def main():
         use_container_width=True
     )
     
+    # מפה גיאוגרפית
+    st.subheader("🗺️ מפת בקשות שירות")
+    
+    # בדיקה אם יש נתוני קואורדינטות
+    if 'latitude' in filtered_df.columns and 'longitude' in filtered_df.columns:
+        st.plotly_chart(
+            create_map_visualization(filtered_df),
+            use_container_width=True
+        )
+        
+        # הסבר על המפה
+        st.info("""
+        **הסבר על המפה:**
+        - כל נקודה מייצגת בקשת שירות
+        - צבע הנקודה מציין את סוג התקלה
+        - גודל הנקודה מציין את זמן המענה (גדול יותר = זמן מענה ארוך יותר)
+        - לחץ על נקודה לקבלת פרטים מלאים
+        """)
+    else:
+        st.warning("נתוני קואורדינטות לא זמינים. אנא הרץ את generate_data.py מחדש ליצירת נתונים עם מיקומים.")
+    
     # טבלת נתונים מפורטת
     st.subheader("📋 נתונים מפורטים")
     
     # הצגת הנתונים המסוננים
-    display_df = filtered_df[['id', 'opened_at', 'responded_at', 'region', 'issue_type', 'status', 'response_time_minutes']].copy()
+    columns_to_show = ['id', 'opened_at', 'responded_at', 'region', 'issue_type', 'status', 'response_time_minutes']
+    
+    # הוספת קואורדינטות אם קיימות
+    if 'latitude' in filtered_df.columns and 'longitude' in filtered_df.columns:
+        columns_to_show.extend(['latitude', 'longitude'])
+    
+    display_df = filtered_df[columns_to_show].copy()
     display_df['response_time_minutes'] = display_df['response_time_minutes'].round(1)
     
     # שינוי שמות העמודות לעברית
-    display_df.columns = ['מזהה', 'זמן פתיחה', 'זמן מענה', 'אזור', 'סוג תקלה', 'סטטוס', 'זמן מענה (דקות)']
+    column_names = ['מזהה', 'זמן פתיחה', 'זמן מענה', 'אזור', 'סוג תקלה', 'סטטוס', 'זמן מענה (דקות)']
+    if 'latitude' in filtered_df.columns and 'longitude' in filtered_df.columns:
+        column_names.extend(['קו רוחב', 'קו אורך'])
+    
+    display_df.columns = column_names
     
     st.dataframe(
         display_df,

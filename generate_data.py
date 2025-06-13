@@ -13,8 +13,18 @@ def generate_service_requests(num_records=100):
         list: רשימת בקשות שירות
     """
     
-    # רשימת אזורים בישראל
-    regions = ["תל אביב", "חיפה", "ירושלים", "באר שבע", "נתניה", "פתח תקווה", "אשדוד", "ראשון לציון"]
+    # רשימת אזורים בישראל עם קואורדינטות
+    regions_data = {
+        "תל אביב": {"lat": 32.0853, "lon": 34.7818},
+        "חיפה": {"lat": 32.7940, "lon": 34.9896},
+        "ירושלים": {"lat": 31.7683, "lon": 35.2137},
+        "באר שבע": {"lat": 31.2518, "lon": 34.7915},
+        "נתניה": {"lat": 32.3215, "lon": 34.8532},
+        "פתח תקווה": {"lat": 32.0870, "lon": 34.8873},
+        "אשדוד": {"lat": 31.8044, "lon": 34.6553},
+        "ראשון לציון": {"lat": 31.9730, "lon": 34.8066}
+    }
+    regions = list(regions_data.keys())
     
     # סוגי תקלות נפוצות
     issue_types = ["מצבר", "פנצ'ר", "תקלת מנוע", "נגמר דלק", "מפתח נעול ברכב", "תקלת חשמל", "תאונה קלה"]
@@ -49,6 +59,12 @@ def generate_service_requests(num_records=100):
         issue_type = random.choice(issue_types)
         status = random.choice(statuses)
         
+        # הוספת רעש קטן לקואורדינטות (כדי לא להציג את כל הנקודות באותו מקום)
+        base_lat = regions_data[region]["lat"]
+        base_lon = regions_data[region]["lon"]
+        lat = base_lat + random.uniform(-0.05, 0.05)  # רעש של עד 5 ק"מ
+        lon = base_lon + random.uniform(-0.05, 0.05)
+        
         # יצירת רשומת בקשת שירות
         request = {
             "id": request_id,
@@ -56,7 +72,9 @@ def generate_service_requests(num_records=100):
             "responded_at": responded_at.strftime("%Y-%m-%dT%H:%M:%S"),
             "region": region,
             "issue_type": issue_type,
-            "status": status
+            "status": status,
+            "latitude": round(lat, 6),
+            "longitude": round(lon, 6)
         }
         
         service_requests.append(request)

@@ -1,802 +1,1002 @@
 [
   {
     "id": "REQ001",
-    "opened_at": "2025-05-24T06:50:01",
-    "responded_at": "2025-05-24T07:56:01",
-    "region": "חיפה",
-    "issue_type": "תאונה קלה",
-    "status": "נפתר"
+    "opened_at": "2025-06-11T10:22:54",
+    "responded_at": "2025-06-11T12:42:54",
+    "region": "נתניה",
+    "issue_type": "תקלת חשמל",
+    "status": "נפתר",
+    "latitude": 32.285353,
+    "longitude": 34.807607
   },
   {
     "id": "REQ002",
-    "opened_at": "2025-05-30T14:05:01",
-    "responded_at": "2025-05-30T16:06:01",
-    "region": "ראשון לציון",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "בוטל"
+    "opened_at": "2025-05-16T09:04:54",
+    "responded_at": "2025-05-16T11:12:54",
+    "region": "פתח תקווה",
+    "issue_type": "מצבר",
+    "status": "ממתין",
+    "latitude": 32.069359,
+    "longitude": 34.934912
   },
   {
     "id": "REQ003",
-    "opened_at": "2025-05-30T06:58:01",
-    "responded_at": "2025-05-30T08:49:01",
-    "region": "אשדוד",
-    "issue_type": "תקלת חשמל",
-    "status": "ממתין"
+    "opened_at": "2025-05-29T23:08:54",
+    "responded_at": "2025-05-30T01:58:54",
+    "region": "ראשון לציון",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "נפתר",
+    "latitude": 31.958288,
+    "longitude": 34.798673
   },
   {
     "id": "REQ004",
-    "opened_at": "2025-05-21T07:07:01",
-    "responded_at": "2025-05-21T07:53:01",
-    "region": "ראשון לציון",
+    "opened_at": "2025-05-21T09:40:54",
+    "responded_at": "2025-05-21T11:40:54",
+    "region": "פתח תקווה",
     "issue_type": "תאונה קלה",
-    "status": "ממתין"
+    "status": "בטיפול",
+    "latitude": 32.107571,
+    "longitude": 34.920642
   },
   {
     "id": "REQ005",
-    "opened_at": "2025-05-18T09:05:01",
-    "responded_at": "2025-05-18T11:35:01",
-    "region": "באר שבע",
-    "issue_type": "נגמר דלק",
-    "status": "בוטל"
+    "opened_at": "2025-06-06T19:21:54",
+    "responded_at": "2025-06-06T21:49:54",
+    "region": "אשדוד",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "בוטל",
+    "latitude": 31.77867,
+    "longitude": 34.632856
   },
   {
     "id": "REQ006",
-    "opened_at": "2025-05-19T03:05:01",
-    "responded_at": "2025-05-19T05:41:01",
-    "region": "ירושלים",
-    "issue_type": "מצבר",
-    "status": "נפתר"
+    "opened_at": "2025-05-31T07:44:54",
+    "responded_at": "2025-05-31T09:38:54",
+    "region": "חיפה",
+    "issue_type": "תקלת חשמל",
+    "status": "נפתר",
+    "latitude": 32.756537,
+    "longitude": 35.028891
   },
   {
     "id": "REQ007",
-    "opened_at": "2025-06-08T03:27:01",
-    "responded_at": "2025-06-08T05:00:01",
+    "opened_at": "2025-05-15T05:07:54",
+    "responded_at": "2025-05-15T05:27:54",
     "region": "חיפה",
-    "issue_type": "תקלת מנוע",
-    "status": "ממתין"
+    "issue_type": "מפתח נעול ברכב",
+    "status": "ממתין",
+    "latitude": 32.786092,
+    "longitude": 35.036218
   },
   {
     "id": "REQ008",
-    "opened_at": "2025-05-20T12:38:01",
-    "responded_at": "2025-05-20T14:39:01",
-    "region": "תל אביב",
+    "opened_at": "2025-06-12T21:35:54",
+    "responded_at": "2025-06-13T00:04:54",
+    "region": "ירושלים",
     "issue_type": "מפתח נעול ברכב",
-    "status": "ממתין"
+    "status": "בטיפול",
+    "latitude": 31.72219,
+    "longitude": 35.216765
   },
   {
     "id": "REQ009",
-    "opened_at": "2025-05-23T07:46:01",
-    "responded_at": "2025-05-23T09:08:01",
-    "region": "פתח תקווה",
-    "issue_type": "תקלת חשמל",
-    "status": "ממתין"
+    "opened_at": "2025-05-15T03:36:54",
+    "responded_at": "2025-05-15T06:00:54",
+    "region": "באר שבע",
+    "issue_type": "פנצ'ר",
+    "status": "בוטל",
+    "latitude": 31.214549,
+    "longitude": 34.829725
   },
   {
     "id": "REQ010",
-    "opened_at": "2025-06-12T05:48:01",
-    "responded_at": "2025-06-12T07:39:01",
-    "region": "באר שבע",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "נפתר"
+    "opened_at": "2025-05-18T22:15:54",
+    "responded_at": "2025-05-18T23:53:54",
+    "region": "ראשון לציון",
+    "issue_type": "תקלת מנוע",
+    "status": "נפתר",
+    "latitude": 32.008904,
+    "longitude": 34.791826
   },
   {
     "id": "REQ011",
-    "opened_at": "2025-05-14T01:07:01",
-    "responded_at": "2025-05-14T03:15:01",
+    "opened_at": "2025-05-22T05:28:54",
+    "responded_at": "2025-05-22T06:06:54",
     "region": "תל אביב",
-    "issue_type": "תקלת חשמל",
-    "status": "בטיפול"
+    "issue_type": "נגמר דלק",
+    "status": "נפתר",
+    "latitude": 32.035522,
+    "longitude": 34.784409
   },
   {
     "id": "REQ012",
-    "opened_at": "2025-05-20T00:45:01",
-    "responded_at": "2025-05-20T03:00:01",
+    "opened_at": "2025-06-08T02:13:54",
+    "responded_at": "2025-06-08T05:00:54",
     "region": "פתח תקווה",
-    "issue_type": "תקלת חשמל",
-    "status": "נפתר"
+    "issue_type": "תקלת מנוע",
+    "status": "ממתין",
+    "latitude": 32.131295,
+    "longitude": 34.898754
   },
   {
     "id": "REQ013",
-    "opened_at": "2025-05-19T16:34:01",
-    "responded_at": "2025-05-19T18:04:01",
+    "opened_at": "2025-05-17T20:03:54",
+    "responded_at": "2025-05-17T21:48:54",
     "region": "פתח תקווה",
     "issue_type": "נגמר דלק",
-    "status": "בוטל"
+    "status": "בוטל",
+    "latitude": 32.055421,
+    "longitude": 34.897983
   },
   {
     "id": "REQ014",
-    "opened_at": "2025-06-08T10:38:01",
-    "responded_at": "2025-06-08T13:20:01",
-    "region": "חיפה",
-    "issue_type": "מצבר",
-    "status": "בטיפול"
+    "opened_at": "2025-05-21T05:18:54",
+    "responded_at": "2025-05-21T05:55:54",
+    "region": "תל אביב",
+    "issue_type": "פנצ'ר",
+    "status": "ממתין",
+    "latitude": 32.075346,
+    "longitude": 34.81633
   },
   {
     "id": "REQ015",
-    "opened_at": "2025-06-05T06:45:01",
-    "responded_at": "2025-06-05T08:43:01",
-    "region": "פתח תקווה",
-    "issue_type": "תאונה קלה",
-    "status": "בטיפול"
+    "opened_at": "2025-05-26T23:16:54",
+    "responded_at": "2025-05-26T23:32:54",
+    "region": "ראשון לציון",
+    "issue_type": "תקלת מנוע",
+    "status": "ממתין",
+    "latitude": 32.011563,
+    "longitude": 34.759331
   },
   {
     "id": "REQ016",
-    "opened_at": "2025-05-30T09:24:01",
-    "responded_at": "2025-05-30T10:10:01",
-    "region": "באר שבע",
-    "issue_type": "תקלת מנוע",
-    "status": "בטיפול"
+    "opened_at": "2025-05-19T06:10:54",
+    "responded_at": "2025-05-19T06:59:54",
+    "region": "פתח תקווה",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "נפתר",
+    "latitude": 32.090857,
+    "longitude": 34.935539
   },
   {
     "id": "REQ017",
-    "opened_at": "2025-05-28T09:34:01",
-    "responded_at": "2025-05-28T12:10:01",
-    "region": "פתח תקווה",
-    "issue_type": "מצבר",
-    "status": "ממתין"
+    "opened_at": "2025-06-12T04:12:54",
+    "responded_at": "2025-06-12T06:33:54",
+    "region": "ירושלים",
+    "issue_type": "תקלת מנוע",
+    "status": "ממתין",
+    "latitude": 31.759872,
+    "longitude": 35.211112
   },
   {
     "id": "REQ018",
-    "opened_at": "2025-05-18T04:36:01",
-    "responded_at": "2025-05-18T06:00:01",
-    "region": "חיפה",
-    "issue_type": "תאונה קלה",
-    "status": "ממתין"
+    "opened_at": "2025-06-05T21:07:54",
+    "responded_at": "2025-06-05T21:52:54",
+    "region": "פתח תקווה",
+    "issue_type": "פנצ'ר",
+    "status": "בוטל",
+    "latitude": 32.072105,
+    "longitude": 34.932915
   },
   {
     "id": "REQ019",
-    "opened_at": "2025-05-28T04:15:01",
-    "responded_at": "2025-05-28T06:17:01",
-    "region": "חיפה",
-    "issue_type": "פנצ'ר",
-    "status": "בוטל"
+    "opened_at": "2025-05-19T20:34:54",
+    "responded_at": "2025-05-19T23:30:54",
+    "region": "ראשון לציון",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "בטיפול",
+    "latitude": 31.964525,
+    "longitude": 34.761359
   },
   {
     "id": "REQ020",
-    "opened_at": "2025-06-09T16:28:01",
-    "responded_at": "2025-06-09T18:47:01",
-    "region": "חיפה",
+    "opened_at": "2025-06-14T02:30:54",
+    "responded_at": "2025-06-14T03:58:54",
+    "region": "תל אביב",
     "issue_type": "נגמר דלק",
-    "status": "בוטל"
+    "status": "ממתין",
+    "latitude": 32.066142,
+    "longitude": 34.815497
   },
   {
     "id": "REQ021",
-    "opened_at": "2025-05-17T07:55:01",
-    "responded_at": "2025-05-17T10:39:01",
-    "region": "פתח תקווה",
+    "opened_at": "2025-05-16T09:13:54",
+    "responded_at": "2025-05-16T09:47:54",
+    "region": "נתניה",
     "issue_type": "מפתח נעול ברכב",
-    "status": "ממתין"
+    "status": "בוטל",
+    "latitude": 32.300013,
+    "longitude": 34.818665
   },
   {
     "id": "REQ022",
-    "opened_at": "2025-05-14T02:02:01",
-    "responded_at": "2025-05-14T03:25:01",
-    "region": "חיפה",
-    "issue_type": "תקלת חשמל",
-    "status": "בוטל"
+    "opened_at": "2025-05-30T18:41:54",
+    "responded_at": "2025-05-30T20:11:54",
+    "region": "נתניה",
+    "issue_type": "תקלת מנוע",
+    "status": "נפתר",
+    "latitude": 32.363786,
+    "longitude": 34.831487
   },
   {
     "id": "REQ023",
-    "opened_at": "2025-05-24T01:03:01",
-    "responded_at": "2025-05-24T03:49:01",
-    "region": "נתניה",
-    "issue_type": "תקלת מנוע",
-    "status": "בטיפול"
+    "opened_at": "2025-05-26T10:57:54",
+    "responded_at": "2025-05-26T12:00:54",
+    "region": "חיפה",
+    "issue_type": "נגמר דלק",
+    "status": "בטיפול",
+    "latitude": 32.796294,
+    "longitude": 34.991041
   },
   {
     "id": "REQ024",
-    "opened_at": "2025-06-01T11:09:01",
-    "responded_at": "2025-06-01T11:52:01",
+    "opened_at": "2025-06-13T19:06:54",
+    "responded_at": "2025-06-13T21:39:54",
     "region": "תל אביב",
-    "issue_type": "תקלת מנוע",
-    "status": "ממתין"
+    "issue_type": "תקלת חשמל",
+    "status": "נפתר",
+    "latitude": 32.089615,
+    "longitude": 34.74154
   },
   {
     "id": "REQ025",
-    "opened_at": "2025-06-04T16:30:01",
-    "responded_at": "2025-06-04T17:27:01",
-    "region": "ירושלים",
-    "issue_type": "תקלת חשמל",
-    "status": "בטיפול"
+    "opened_at": "2025-06-08T22:46:54",
+    "responded_at": "2025-06-09T01:07:54",
+    "region": "פתח תקווה",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "בוטל",
+    "latitude": 32.123792,
+    "longitude": 34.928606
   },
   {
     "id": "REQ026",
-    "opened_at": "2025-06-09T01:48:01",
-    "responded_at": "2025-06-09T04:14:01",
-    "region": "תל אביב",
-    "issue_type": "פנצ'ר",
-    "status": "בטיפול"
+    "opened_at": "2025-05-15T09:14:54",
+    "responded_at": "2025-05-15T10:25:54",
+    "region": "באר שבע",
+    "issue_type": "תקלת מנוע",
+    "status": "בטיפול",
+    "latitude": 31.21248,
+    "longitude": 34.744156
   },
   {
     "id": "REQ027",
-    "opened_at": "2025-05-19T05:36:01",
-    "responded_at": "2025-05-19T07:04:01",
-    "region": "ירושלים",
-    "issue_type": "נגמר דלק",
-    "status": "ממתין"
+    "opened_at": "2025-05-20T02:04:54",
+    "responded_at": "2025-05-20T02:32:54",
+    "region": "חיפה",
+    "issue_type": "תקלת מנוע",
+    "status": "נפתר",
+    "latitude": 32.749166,
+    "longitude": 35.01355
   },
   {
     "id": "REQ028",
-    "opened_at": "2025-06-06T02:31:01",
-    "responded_at": "2025-06-06T04:20:01",
-    "region": "אשדוד",
-    "issue_type": "מצבר",
-    "status": "ממתין"
+    "opened_at": "2025-06-08T21:27:54",
+    "responded_at": "2025-06-08T21:53:54",
+    "region": "תל אביב",
+    "issue_type": "תאונה קלה",
+    "status": "ממתין",
+    "latitude": 32.081217,
+    "longitude": 34.788261
   },
   {
     "id": "REQ029",
-    "opened_at": "2025-06-05T15:12:01",
-    "responded_at": "2025-06-05T16:48:01",
-    "region": "פתח תקווה",
-    "issue_type": "פנצ'ר",
-    "status": "בוטל"
+    "opened_at": "2025-06-03T09:36:54",
+    "responded_at": "2025-06-03T12:34:54",
+    "region": "חיפה",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "נפתר",
+    "latitude": 32.791502,
+    "longitude": 34.943438
   },
   {
     "id": "REQ030",
-    "opened_at": "2025-06-01T15:32:01",
-    "responded_at": "2025-06-01T17:25:01",
-    "region": "אשדוד",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "ממתין"
+    "opened_at": "2025-06-01T23:12:54",
+    "responded_at": "2025-06-01T23:41:54",
+    "region": "ראשון לציון",
+    "issue_type": "נגמר דלק",
+    "status": "נפתר",
+    "latitude": 31.946205,
+    "longitude": 34.757754
   },
   {
     "id": "REQ031",
-    "opened_at": "2025-06-03T10:02:01",
-    "responded_at": "2025-06-03T13:02:01",
-    "region": "אשדוד",
-    "issue_type": "תקלת מנוע",
-    "status": "בטיפול"
+    "opened_at": "2025-05-15T22:52:54",
+    "responded_at": "2025-05-15T23:50:54",
+    "region": "חיפה",
+    "issue_type": "פנצ'ר",
+    "status": "בוטל",
+    "latitude": 32.762549,
+    "longitude": 35.015136
   },
   {
     "id": "REQ032",
-    "opened_at": "2025-05-29T12:35:01",
-    "responded_at": "2025-05-29T13:24:01",
-    "region": "אשדוד",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "ממתין"
+    "opened_at": "2025-06-11T08:57:54",
+    "responded_at": "2025-06-11T10:05:54",
+    "region": "באר שבע",
+    "issue_type": "פנצ'ר",
+    "status": "נפתר",
+    "latitude": 31.268067,
+    "longitude": 34.780048
   },
   {
     "id": "REQ033",
-    "opened_at": "2025-05-23T09:01:01",
-    "responded_at": "2025-05-23T10:34:01",
-    "region": "אשדוד",
+    "opened_at": "2025-06-03T23:24:54",
+    "responded_at": "2025-06-04T02:11:54",
+    "region": "באר שבע",
     "issue_type": "פנצ'ר",
-    "status": "בטיפול"
+    "status": "נפתר",
+    "latitude": 31.238771,
+    "longitude": 34.744879
   },
   {
     "id": "REQ034",
-    "opened_at": "2025-06-10T15:05:01",
-    "responded_at": "2025-06-10T16:00:01",
-    "region": "ירושלים",
-    "issue_type": "נגמר דלק",
-    "status": "בוטל"
+    "opened_at": "2025-06-03T21:16:54",
+    "responded_at": "2025-06-04T00:04:54",
+    "region": "פתח תקווה",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "נפתר",
+    "latitude": 32.053982,
+    "longitude": 34.904446
   },
   {
     "id": "REQ035",
-    "opened_at": "2025-05-25T14:19:01",
-    "responded_at": "2025-05-25T17:00:01",
-    "region": "ראשון לציון",
-    "issue_type": "תאונה קלה",
-    "status": "נפתר"
+    "opened_at": "2025-05-22T22:09:54",
+    "responded_at": "2025-05-23T00:24:54",
+    "region": "נתניה",
+    "issue_type": "פנצ'ר",
+    "status": "בוטל",
+    "latitude": 32.296253,
+    "longitude": 34.852315
   },
   {
     "id": "REQ036",
-    "opened_at": "2025-05-28T08:07:01",
-    "responded_at": "2025-05-28T08:37:01",
-    "region": "פתח תקווה",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "ממתין"
+    "opened_at": "2025-05-16T06:32:54",
+    "responded_at": "2025-05-16T07:43:54",
+    "region": "ירושלים",
+    "issue_type": "תקלת מנוע",
+    "status": "בוטל",
+    "latitude": 31.755396,
+    "longitude": 35.233493
   },
   {
     "id": "REQ037",
-    "opened_at": "2025-05-25T15:33:01",
-    "responded_at": "2025-05-25T18:07:01",
-    "region": "נתניה",
-    "issue_type": "תקלת מנוע",
-    "status": "ממתין"
+    "opened_at": "2025-05-17T03:53:54",
+    "responded_at": "2025-05-17T05:41:54",
+    "region": "אשדוד",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "בטיפול",
+    "latitude": 31.761113,
+    "longitude": 34.627493
   },
   {
     "id": "REQ038",
-    "opened_at": "2025-05-15T02:11:01",
-    "responded_at": "2025-05-15T02:57:01",
-    "region": "פתח תקווה",
+    "opened_at": "2025-05-26T19:27:54",
+    "responded_at": "2025-05-26T20:33:54",
+    "region": "חיפה",
     "issue_type": "נגמר דלק",
-    "status": "נפתר"
+    "status": "בטיפול",
+    "latitude": 32.753397,
+    "longitude": 34.985122
   },
   {
     "id": "REQ039",
-    "opened_at": "2025-06-07T11:34:01",
-    "responded_at": "2025-06-07T14:17:01",
-    "region": "באר שבע",
-    "issue_type": "מצבר",
-    "status": "בוטל"
+    "opened_at": "2025-05-25T19:50:54",
+    "responded_at": "2025-05-25T21:12:54",
+    "region": "ירושלים",
+    "issue_type": "פנצ'ר",
+    "status": "בוטל",
+    "latitude": 31.79483,
+    "longitude": 35.206007
   },
   {
     "id": "REQ040",
-    "opened_at": "2025-05-16T01:08:01",
-    "responded_at": "2025-05-16T02:31:01",
-    "region": "תל אביב",
+    "opened_at": "2025-05-29T04:30:54",
+    "responded_at": "2025-05-29T06:21:54",
+    "region": "אשדוד",
     "issue_type": "מצבר",
-    "status": "נפתר"
+    "status": "בוטל",
+    "latitude": 31.849223,
+    "longitude": 34.696785
   },
   {
     "id": "REQ041",
-    "opened_at": "2025-05-16T06:38:01",
-    "responded_at": "2025-05-16T06:54:01",
-    "region": "ירושלים",
-    "issue_type": "פנצ'ר",
-    "status": "ממתין"
+    "opened_at": "2025-06-07T01:42:54",
+    "responded_at": "2025-06-07T02:21:54",
+    "region": "תל אביב",
+    "issue_type": "תקלת מנוע",
+    "status": "ממתין",
+    "latitude": 32.090246,
+    "longitude": 34.827178
   },
   {
     "id": "REQ042",
-    "opened_at": "2025-05-21T14:24:01",
-    "responded_at": "2025-05-21T16:24:01",
-    "region": "חיפה",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "נפתר"
+    "opened_at": "2025-06-04T19:44:54",
+    "responded_at": "2025-06-04T22:34:54",
+    "region": "תל אביב",
+    "issue_type": "תקלת חשמל",
+    "status": "נפתר",
+    "latitude": 32.065748,
+    "longitude": 34.831699
   },
   {
     "id": "REQ043",
-    "opened_at": "2025-05-17T03:19:01",
-    "responded_at": "2025-05-17T04:36:01",
-    "region": "נתניה",
-    "issue_type": "תקלת חשמל",
-    "status": "בוטל"
+    "opened_at": "2025-06-04T22:22:54",
+    "responded_at": "2025-06-04T23:39:54",
+    "region": "באר שבע",
+    "issue_type": "פנצ'ר",
+    "status": "נפתר",
+    "latitude": 31.299136,
+    "longitude": 34.77209
   },
   {
     "id": "REQ044",
-    "opened_at": "2025-06-03T13:54:01",
-    "responded_at": "2025-06-03T14:18:01",
-    "region": "תל אביב",
-    "issue_type": "תאונה קלה",
-    "status": "נפתר"
+    "opened_at": "2025-06-02T02:52:54",
+    "responded_at": "2025-06-02T05:46:54",
+    "region": "ראשון לציון",
+    "issue_type": "תקלת חשמל",
+    "status": "בוטל",
+    "latitude": 31.967517,
+    "longitude": 34.760572
   },
   {
     "id": "REQ045",
-    "opened_at": "2025-05-17T02:43:01",
-    "responded_at": "2025-05-17T02:54:01",
-    "region": "באר שבע",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "נפתר"
+    "opened_at": "2025-05-19T00:00:54",
+    "responded_at": "2025-05-19T02:56:54",
+    "region": "פתח תקווה",
+    "issue_type": "מצבר",
+    "status": "בטיפול",
+    "latitude": 32.096705,
+    "longitude": 34.915838
   },
   {
     "id": "REQ046",
-    "opened_at": "2025-06-06T13:00:01",
-    "responded_at": "2025-06-06T15:00:01",
-    "region": "אשדוד",
-    "issue_type": "נגמר דלק",
-    "status": "ממתין"
+    "opened_at": "2025-05-19T10:59:54",
+    "responded_at": "2025-05-19T12:37:54",
+    "region": "נתניה",
+    "issue_type": "תקלת חשמל",
+    "status": "בטיפול",
+    "latitude": 32.272812,
+    "longitude": 34.850367
   },
   {
     "id": "REQ047",
-    "opened_at": "2025-05-21T07:54:01",
-    "responded_at": "2025-05-21T09:18:01",
-    "region": "נתניה",
+    "opened_at": "2025-05-21T21:26:54",
+    "responded_at": "2025-05-21T23:06:54",
+    "region": "באר שבע",
     "issue_type": "מצבר",
-    "status": "ממתין"
+    "status": "בוטל",
+    "latitude": 31.294979,
+    "longitude": 34.747842
   },
   {
     "id": "REQ048",
-    "opened_at": "2025-06-12T05:27:01",
-    "responded_at": "2025-06-12T08:08:01",
-    "region": "ירושלים",
-    "issue_type": "תקלת מנוע",
-    "status": "ממתין"
+    "opened_at": "2025-05-29T08:56:54",
+    "responded_at": "2025-05-29T09:57:54",
+    "region": "פתח תקווה",
+    "issue_type": "תקלת חשמל",
+    "status": "ממתין",
+    "latitude": 32.111966,
+    "longitude": 34.854473
   },
   {
     "id": "REQ049",
-    "opened_at": "2025-06-05T01:58:01",
-    "responded_at": "2025-06-05T04:03:01",
-    "region": "ירושלים",
-    "issue_type": "פנצ'ר",
-    "status": "בטיפול"
+    "opened_at": "2025-06-01T04:04:54",
+    "responded_at": "2025-06-01T05:09:54",
+    "region": "באר שבע",
+    "issue_type": "תאונה קלה",
+    "status": "בוטל",
+    "latitude": 31.235252,
+    "longitude": 34.784448
   },
   {
     "id": "REQ050",
-    "opened_at": "2025-05-16T10:50:01",
-    "responded_at": "2025-05-16T13:05:01",
-    "region": "פתח תקווה",
-    "issue_type": "תקלת חשמל",
-    "status": "בוטל"
+    "opened_at": "2025-05-30T08:58:54",
+    "responded_at": "2025-05-30T09:51:54",
+    "region": "באר שבע",
+    "issue_type": "נגמר דלק",
+    "status": "נפתר",
+    "latitude": 31.297398,
+    "longitude": 34.795902
   },
   {
     "id": "REQ051",
-    "opened_at": "2025-05-29T13:33:01",
-    "responded_at": "2025-05-29T16:13:01",
-    "region": "תל אביב",
-    "issue_type": "תקלת מנוע",
-    "status": "בטיפול"
+    "opened_at": "2025-05-20T07:26:54",
+    "responded_at": "2025-05-20T09:41:54",
+    "region": "ראשון לציון",
+    "issue_type": "נגמר דלק",
+    "status": "נפתר",
+    "latitude": 31.955053,
+    "longitude": 34.832322
   },
   {
     "id": "REQ052",
-    "opened_at": "2025-05-29T08:57:01",
-    "responded_at": "2025-05-29T11:27:01",
+    "opened_at": "2025-05-18T01:14:54",
+    "responded_at": "2025-05-18T04:06:54",
     "region": "באר שבע",
     "issue_type": "תקלת חשמל",
-    "status": "בטיפול"
+    "status": "בטיפול",
+    "latitude": 31.239271,
+    "longitude": 34.776132
   },
   {
     "id": "REQ053",
-    "opened_at": "2025-05-25T07:27:01",
-    "responded_at": "2025-05-25T07:49:01",
-    "region": "פתח תקווה",
-    "issue_type": "נגמר דלק",
-    "status": "בוטל"
+    "opened_at": "2025-06-01T09:51:54",
+    "responded_at": "2025-06-01T12:11:54",
+    "region": "נתניה",
+    "issue_type": "תאונה קלה",
+    "status": "בטיפול",
+    "latitude": 32.360718,
+    "longitude": 34.851641
   },
   {
     "id": "REQ054",
-    "opened_at": "2025-06-01T06:40:01",
-    "responded_at": "2025-06-01T08:17:01",
-    "region": "ראשון לציון",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "נפתר"
+    "opened_at": "2025-05-30T21:26:54",
+    "responded_at": "2025-05-30T22:53:54",
+    "region": "תל אביב",
+    "issue_type": "פנצ'ר",
+    "status": "ממתין",
+    "latitude": 32.114115,
+    "longitude": 34.761147
   },
   {
     "id": "REQ055",
-    "opened_at": "2025-05-15T06:15:01",
-    "responded_at": "2025-05-15T07:04:01",
-    "region": "נתניה",
-    "issue_type": "תקלת חשמל",
-    "status": "ממתין"
+    "opened_at": "2025-05-17T22:10:54",
+    "responded_at": "2025-05-18T00:07:54",
+    "region": "ירושלים",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "ממתין",
+    "latitude": 31.80665,
+    "longitude": 35.234775
   },
   {
     "id": "REQ056",
-    "opened_at": "2025-05-29T01:43:01",
-    "responded_at": "2025-05-29T02:39:01",
-    "region": "באר שבע",
-    "issue_type": "פנצ'ר",
-    "status": "בטיפול"
+    "opened_at": "2025-05-15T05:57:54",
+    "responded_at": "2025-05-15T07:30:54",
+    "region": "ראשון לציון",
+    "issue_type": "תקלת מנוע",
+    "status": "ממתין",
+    "latitude": 32.011606,
+    "longitude": 34.773374
   },
   {
     "id": "REQ057",
-    "opened_at": "2025-06-07T00:29:01",
-    "responded_at": "2025-06-07T02:54:01",
-    "region": "חיפה",
-    "issue_type": "תקלת מנוע",
-    "status": "בוטל"
+    "opened_at": "2025-06-12T08:27:54",
+    "responded_at": "2025-06-12T09:57:54",
+    "region": "באר שבע",
+    "issue_type": "תקלת חשמל",
+    "status": "בטיפול",
+    "latitude": 31.246059,
+    "longitude": 34.754341
   },
   {
     "id": "REQ058",
-    "opened_at": "2025-05-24T14:24:01",
-    "responded_at": "2025-05-24T15:35:01",
-    "region": "אשדוד",
-    "issue_type": "מצבר",
-    "status": "ממתין"
+    "opened_at": "2025-05-26T23:57:54",
+    "responded_at": "2025-05-27T00:15:54",
+    "region": "ראשון לציון",
+    "issue_type": "תקלת מנוע",
+    "status": "ממתין",
+    "latitude": 32.020831,
+    "longitude": 34.797342
   },
   {
     "id": "REQ059",
-    "opened_at": "2025-05-26T16:30:01",
-    "responded_at": "2025-05-26T17:19:01",
-    "region": "ירושלים",
-    "issue_type": "נגמר דלק",
-    "status": "בוטל"
+    "opened_at": "2025-06-06T10:56:54",
+    "responded_at": "2025-06-06T11:19:54",
+    "region": "תל אביב",
+    "issue_type": "תקלת חשמל",
+    "status": "ממתין",
+    "latitude": 32.059317,
+    "longitude": 34.793654
   },
   {
     "id": "REQ060",
-    "opened_at": "2025-05-20T13:51:01",
-    "responded_at": "2025-05-20T16:20:01",
-    "region": "ראשון לציון",
-    "issue_type": "נגמר דלק",
-    "status": "נפתר"
+    "opened_at": "2025-06-07T18:14:54",
+    "responded_at": "2025-06-07T20:37:54",
+    "region": "באר שבע",
+    "issue_type": "תקלת מנוע",
+    "status": "בטיפול",
+    "latitude": 31.254267,
+    "longitude": 34.746175
   },
   {
     "id": "REQ061",
-    "opened_at": "2025-06-08T16:27:01",
-    "responded_at": "2025-06-08T16:41:01",
-    "region": "ראשון לציון",
-    "issue_type": "מצבר",
-    "status": "ממתין"
+    "opened_at": "2025-06-04T09:41:54",
+    "responded_at": "2025-06-04T11:51:54",
+    "region": "פתח תקווה",
+    "issue_type": "תאונה קלה",
+    "status": "בוטל",
+    "latitude": 32.048791,
+    "longitude": 34.874567
   },
   {
     "id": "REQ062",
-    "opened_at": "2025-05-27T08:57:01",
-    "responded_at": "2025-05-27T10:47:01",
-    "region": "חיפה",
-    "issue_type": "מצבר",
-    "status": "נפתר"
+    "opened_at": "2025-06-01T03:48:54",
+    "responded_at": "2025-06-01T05:27:54",
+    "region": "תל אביב",
+    "issue_type": "פנצ'ר",
+    "status": "בטיפול",
+    "latitude": 32.066747,
+    "longitude": 34.752343
   },
   {
     "id": "REQ063",
-    "opened_at": "2025-06-03T13:56:01",
-    "responded_at": "2025-06-03T16:00:01",
+    "opened_at": "2025-06-06T11:01:54",
+    "responded_at": "2025-06-06T12:13:54",
     "region": "ירושלים",
-    "issue_type": "נגמר דלק",
-    "status": "נפתר"
+    "issue_type": "תקלת חשמל",
+    "status": "ממתין",
+    "latitude": 31.745597,
+    "longitude": 35.255472
   },
   {
     "id": "REQ064",
-    "opened_at": "2025-06-09T02:50:01",
-    "responded_at": "2025-06-09T03:28:01",
-    "region": "פתח תקווה",
-    "issue_type": "פנצ'ר",
-    "status": "ממתין"
+    "opened_at": "2025-06-08T19:31:54",
+    "responded_at": "2025-06-08T20:59:54",
+    "region": "תל אביב",
+    "issue_type": "תקלת חשמל",
+    "status": "בוטל",
+    "latitude": 32.129328,
+    "longitude": 34.775905
   },
   {
     "id": "REQ065",
-    "opened_at": "2025-05-15T05:00:01",
-    "responded_at": "2025-05-15T05:29:01",
+    "opened_at": "2025-05-22T07:04:54",
+    "responded_at": "2025-05-22T07:52:54",
     "region": "באר שבע",
-    "issue_type": "נגמר דלק",
-    "status": "נפתר"
+    "issue_type": "מפתח נעול ברכב",
+    "status": "ממתין",
+    "latitude": 31.204683,
+    "longitude": 34.785364
   },
   {
     "id": "REQ066",
-    "opened_at": "2025-05-16T07:02:01",
-    "responded_at": "2025-05-16T07:34:01",
-    "region": "תל אביב",
+    "opened_at": "2025-06-02T21:39:54",
+    "responded_at": "2025-06-02T22:39:54",
+    "region": "פתח תקווה",
     "issue_type": "תקלת מנוע",
-    "status": "נפתר"
+    "status": "ממתין",
+    "latitude": 32.083792,
+    "longitude": 34.905329
   },
   {
     "id": "REQ067",
-    "opened_at": "2025-06-05T07:13:01",
-    "responded_at": "2025-06-05T07:52:01",
-    "region": "ראשון לציון",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "נפתר"
+    "opened_at": "2025-05-18T03:23:54",
+    "responded_at": "2025-05-18T05:03:54",
+    "region": "באר שבע",
+    "issue_type": "תאונה קלה",
+    "status": "ממתין",
+    "latitude": 31.262231,
+    "longitude": 34.828481
   },
   {
     "id": "REQ068",
-    "opened_at": "2025-06-08T11:11:01",
-    "responded_at": "2025-06-08T12:54:01",
-    "region": "חיפה",
-    "issue_type": "תאונה קלה",
-    "status": "בוטל"
+    "opened_at": "2025-05-28T18:43:54",
+    "responded_at": "2025-05-28T21:01:54",
+    "region": "פתח תקווה",
+    "issue_type": "תקלת מנוע",
+    "status": "בטיפול",
+    "latitude": 32.124282,
+    "longitude": 34.876323
   },
   {
     "id": "REQ069",
-    "opened_at": "2025-05-14T11:33:01",
-    "responded_at": "2025-05-14T14:15:01",
-    "region": "תל אביב",
+    "opened_at": "2025-05-17T03:45:54",
+    "responded_at": "2025-05-17T05:33:54",
+    "region": "ירושלים",
     "issue_type": "מפתח נעול ברכב",
-    "status": "בוטל"
+    "status": "נפתר",
+    "latitude": 31.80445,
+    "longitude": 35.260268
   },
   {
     "id": "REQ070",
-    "opened_at": "2025-05-18T01:09:01",
-    "responded_at": "2025-05-18T01:57:01",
-    "region": "באר שבע",
-    "issue_type": "תקלת חשמל",
-    "status": "בטיפול"
+    "opened_at": "2025-05-17T00:17:54",
+    "responded_at": "2025-05-17T01:20:54",
+    "region": "תל אביב",
+    "issue_type": "מצבר",
+    "status": "בטיפול",
+    "latitude": 32.065549,
+    "longitude": 34.812573
   },
   {
     "id": "REQ071",
-    "opened_at": "2025-05-16T12:43:01",
-    "responded_at": "2025-05-16T14:55:01",
-    "region": "באר שבע",
-    "issue_type": "תקלת מנוע",
-    "status": "בטיפול"
+    "opened_at": "2025-06-07T18:11:54",
+    "responded_at": "2025-06-07T18:50:54",
+    "region": "פתח תקווה",
+    "issue_type": "מצבר",
+    "status": "ממתין",
+    "latitude": 32.125369,
+    "longitude": 34.931601
   },
   {
     "id": "REQ072",
-    "opened_at": "2025-05-22T09:32:01",
-    "responded_at": "2025-05-22T11:04:01",
-    "region": "ראשון לציון",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "נפתר"
+    "opened_at": "2025-05-17T18:21:54",
+    "responded_at": "2025-05-17T20:54:54",
+    "region": "תל אביב",
+    "issue_type": "מצבר",
+    "status": "נפתר",
+    "latitude": 32.038473,
+    "longitude": 34.796235
   },
   {
     "id": "REQ073",
-    "opened_at": "2025-05-14T07:58:01",
-    "responded_at": "2025-05-14T08:34:01",
-    "region": "חיפה",
-    "issue_type": "נגמר דלק",
-    "status": "בטיפול"
+    "opened_at": "2025-06-03T07:22:54",
+    "responded_at": "2025-06-03T09:53:54",
+    "region": "תל אביב",
+    "issue_type": "תקלת חשמל",
+    "status": "נפתר",
+    "latitude": 32.092159,
+    "longitude": 34.771965
   },
   {
     "id": "REQ074",
-    "opened_at": "2025-05-18T11:07:01",
-    "responded_at": "2025-05-18T11:54:01",
-    "region": "תל אביב",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "ממתין"
+    "opened_at": "2025-05-30T08:40:54",
+    "responded_at": "2025-05-30T11:06:54",
+    "region": "ירושלים",
+    "issue_type": "תקלת מנוע",
+    "status": "בטיפול",
+    "latitude": 31.734205,
+    "longitude": 35.169197
   },
   {
     "id": "REQ075",
-    "opened_at": "2025-06-07T07:29:01",
-    "responded_at": "2025-06-07T08:12:01",
-    "region": "פתח תקווה",
+    "opened_at": "2025-05-31T00:27:54",
+    "responded_at": "2025-05-31T01:27:54",
+    "region": "באר שבע",
     "issue_type": "פנצ'ר",
-    "status": "בוטל"
+    "status": "נפתר",
+    "latitude": 31.236527,
+    "longitude": 34.815668
   },
   {
     "id": "REQ076",
-    "opened_at": "2025-05-22T13:13:01",
-    "responded_at": "2025-05-22T14:52:01",
-    "region": "אשדוד",
+    "opened_at": "2025-06-04T00:07:54",
+    "responded_at": "2025-06-04T03:05:54",
+    "region": "פתח תקווה",
     "issue_type": "נגמר דלק",
-    "status": "נפתר"
+    "status": "ממתין",
+    "latitude": 32.124472,
+    "longitude": 34.850514
   },
   {
     "id": "REQ077",
-    "opened_at": "2025-05-30T02:41:01",
-    "responded_at": "2025-05-30T05:29:01",
-    "region": "נתניה",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "בטיפול"
+    "opened_at": "2025-05-21T00:22:54",
+    "responded_at": "2025-05-21T00:32:54",
+    "region": "אשדוד",
+    "issue_type": "פנצ'ר",
+    "status": "נפתר",
+    "latitude": 31.83879,
+    "longitude": 34.63347
   },
   {
     "id": "REQ078",
-    "opened_at": "2025-06-12T14:33:01",
-    "responded_at": "2025-06-12T17:25:01",
-    "region": "אשדוד",
-    "issue_type": "נגמר דלק",
-    "status": "בטיפול"
+    "opened_at": "2025-06-04T23:56:54",
+    "responded_at": "2025-06-05T00:36:54",
+    "region": "חיפה",
+    "issue_type": "תקלת חשמל",
+    "status": "בוטל",
+    "latitude": 32.760763,
+    "longitude": 35.036657
   },
   {
     "id": "REQ079",
-    "opened_at": "2025-05-20T13:53:01",
-    "responded_at": "2025-05-20T16:47:01",
-    "region": "אשדוד",
-    "issue_type": "מצבר",
-    "status": "בטיפול"
+    "opened_at": "2025-06-11T09:41:54",
+    "responded_at": "2025-06-11T11:38:54",
+    "region": "נתניה",
+    "issue_type": "תקלת מנוע",
+    "status": "בטיפול",
+    "latitude": 32.352481,
+    "longitude": 34.887922
   },
   {
     "id": "REQ080",
-    "opened_at": "2025-06-07T02:19:01",
-    "responded_at": "2025-06-07T05:11:01",
-    "region": "אשדוד",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "בטיפול"
+    "opened_at": "2025-06-04T02:11:54",
+    "responded_at": "2025-06-04T02:27:54",
+    "region": "חיפה",
+    "issue_type": "פנצ'ר",
+    "status": "נפתר",
+    "latitude": 32.811171,
+    "longitude": 35.001354
   },
   {
     "id": "REQ081",
-    "opened_at": "2025-06-04T14:51:01",
-    "responded_at": "2025-06-04T15:18:01",
+    "opened_at": "2025-05-22T03:14:54",
+    "responded_at": "2025-05-22T03:47:54",
     "region": "באר שבע",
-    "issue_type": "תקלת מנוע",
-    "status": "בטיפול"
+    "issue_type": "תקלת חשמל",
+    "status": "ממתין",
+    "latitude": 31.226162,
+    "longitude": 34.810417
   },
   {
     "id": "REQ082",
-    "opened_at": "2025-05-30T11:56:01",
-    "responded_at": "2025-05-30T13:10:01",
-    "region": "אשדוד",
-    "issue_type": "מצבר",
-    "status": "ממתין"
+    "opened_at": "2025-05-19T10:46:54",
+    "responded_at": "2025-05-19T12:48:54",
+    "region": "ראשון לציון",
+    "issue_type": "תאונה קלה",
+    "status": "בטיפול",
+    "latitude": 31.967894,
+    "longitude": 34.763214
   },
   {
     "id": "REQ083",
-    "opened_at": "2025-05-29T06:26:01",
-    "responded_at": "2025-05-29T07:11:01",
-    "region": "ירושלים",
-    "issue_type": "פנצ'ר",
-    "status": "ממתין"
+    "opened_at": "2025-06-13T06:07:54",
+    "responded_at": "2025-06-13T06:50:54",
+    "region": "באר שבע",
+    "issue_type": "תאונה קלה",
+    "status": "ממתין",
+    "latitude": 31.267988,
+    "longitude": 34.829852
   },
   {
     "id": "REQ084",
-    "opened_at": "2025-05-16T00:50:01",
-    "responded_at": "2025-05-16T02:17:01",
-    "region": "חיפה",
-    "issue_type": "מצבר",
-    "status": "נפתר"
+    "opened_at": "2025-06-01T23:53:54",
+    "responded_at": "2025-06-02T01:22:54",
+    "region": "ירושלים",
+    "issue_type": "תקלת חשמל",
+    "status": "בוטל",
+    "latitude": 31.802182,
+    "longitude": 35.256661
   },
   {
     "id": "REQ085",
-    "opened_at": "2025-05-27T13:35:01",
-    "responded_at": "2025-05-27T15:19:01",
-    "region": "ירושלים",
-    "issue_type": "תקלת מנוע",
-    "status": "בטיפול"
+    "opened_at": "2025-05-21T02:20:54",
+    "responded_at": "2025-05-21T04:44:54",
+    "region": "אשדוד",
+    "issue_type": "תאונה קלה",
+    "status": "ממתין",
+    "latitude": 31.754832,
+    "longitude": 34.638955
   },
   {
     "id": "REQ086",
-    "opened_at": "2025-05-30T02:28:01",
-    "responded_at": "2025-05-30T04:43:01",
-    "region": "חיפה",
-    "issue_type": "פנצ'ר",
-    "status": "בטיפול"
+    "opened_at": "2025-05-31T09:47:54",
+    "responded_at": "2025-05-31T11:59:54",
+    "region": "פתח תקווה",
+    "issue_type": "תקלת מנוע",
+    "status": "ממתין",
+    "latitude": 32.06233,
+    "longitude": 34.883146
   },
   {
     "id": "REQ087",
-    "opened_at": "2025-05-25T13:44:01",
-    "responded_at": "2025-05-25T14:55:01",
+    "opened_at": "2025-05-29T04:52:54",
+    "responded_at": "2025-05-29T07:51:54",
     "region": "באר שבע",
     "issue_type": "מפתח נעול ברכב",
-    "status": "נפתר"
+    "status": "בטיפול",
+    "latitude": 31.229166,
+    "longitude": 34.761568
   },
   {
     "id": "REQ088",
-    "opened_at": "2025-05-25T14:36:01",
-    "responded_at": "2025-05-25T17:12:01",
-    "region": "נתניה",
-    "issue_type": "תקלת מנוע",
-    "status": "ממתין"
+    "opened_at": "2025-06-09T07:11:54",
+    "responded_at": "2025-06-09T08:02:54",
+    "region": "תל אביב",
+    "issue_type": "תאונה קלה",
+    "status": "בטיפול",
+    "latitude": 32.091043,
+    "longitude": 34.778481
   },
   {
     "id": "REQ089",
-    "opened_at": "2025-05-22T15:11:01",
-    "responded_at": "2025-05-22T15:54:01",
-    "region": "חיפה",
-    "issue_type": "תקלת מנוע",
-    "status": "ממתין"
+    "opened_at": "2025-05-15T03:07:54",
+    "responded_at": "2025-05-15T03:54:54",
+    "region": "ירושלים",
+    "issue_type": "תקלת חשמל",
+    "status": "בוטל",
+    "latitude": 31.722502,
+    "longitude": 35.231263
   },
   {
     "id": "REQ090",
-    "opened_at": "2025-05-31T12:33:01",
-    "responded_at": "2025-05-31T14:27:01",
-    "region": "באר שבע",
+    "opened_at": "2025-05-27T02:01:54",
+    "responded_at": "2025-05-27T03:14:54",
+    "region": "חיפה",
     "issue_type": "פנצ'ר",
-    "status": "ממתין"
+    "status": "ממתין",
+    "latitude": 32.820009,
+    "longitude": 35.005529
   },
   {
     "id": "REQ091",
-    "opened_at": "2025-05-14T03:57:01",
-    "responded_at": "2025-05-14T05:06:01",
-    "region": "פתח תקווה",
-    "issue_type": "נגמר דלק",
-    "status": "בטיפול"
+    "opened_at": "2025-05-25T20:17:54",
+    "responded_at": "2025-05-25T21:30:54",
+    "region": "תל אביב",
+    "issue_type": "תאונה קלה",
+    "status": "בוטל",
+    "latitude": 32.090542,
+    "longitude": 34.828911
   },
   {
     "id": "REQ092",
-    "opened_at": "2025-05-23T13:47:01",
-    "responded_at": "2025-05-23T15:44:01",
-    "region": "נתניה",
-    "issue_type": "תקלת חשמל",
-    "status": "נפתר"
+    "opened_at": "2025-05-19T00:27:54",
+    "responded_at": "2025-05-19T01:37:54",
+    "region": "ראשון לציון",
+    "issue_type": "פנצ'ר",
+    "status": "בוטל",
+    "latitude": 31.934628,
+    "longitude": 34.846641
   },
   {
     "id": "REQ093",
-    "opened_at": "2025-06-02T05:32:01",
-    "responded_at": "2025-06-02T07:19:01",
-    "region": "באר שבע",
-    "issue_type": "פנצ'ר",
-    "status": "נפתר"
+    "opened_at": "2025-05-27T01:06:54",
+    "responded_at": "2025-05-27T02:52:54",
+    "region": "אשדוד",
+    "issue_type": "נגמר דלק",
+    "status": "ממתין",
+    "latitude": 31.833037,
+    "longitude": 34.659742
   },
   {
     "id": "REQ094",
-    "opened_at": "2025-05-18T02:21:01",
-    "responded_at": "2025-05-18T04:33:01",
+    "opened_at": "2025-06-10T20:46:54",
+    "responded_at": "2025-06-10T23:31:54",
     "region": "חיפה",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "ממתין"
+    "issue_type": "תאונה קלה",
+    "status": "נפתר",
+    "latitude": 32.753147,
+    "longitude": 34.950255
   },
   {
     "id": "REQ095",
-    "opened_at": "2025-06-11T08:19:01",
-    "responded_at": "2025-06-11T09:49:01",
-    "region": "נתניה",
-    "issue_type": "תקלת מנוע",
-    "status": "ממתין"
+    "opened_at": "2025-05-28T01:30:54",
+    "responded_at": "2025-05-28T04:11:54",
+    "region": "ירושלים",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "בוטל",
+    "latitude": 31.719822,
+    "longitude": 35.196519
   },
   {
     "id": "REQ096",
-    "opened_at": "2025-05-19T03:54:01",
-    "responded_at": "2025-05-19T06:15:01",
-    "region": "חיפה",
-    "issue_type": "פנצ'ר",
-    "status": "בוטל"
+    "opened_at": "2025-06-01T21:30:54",
+    "responded_at": "2025-06-02T00:10:54",
+    "region": "פתח תקווה",
+    "issue_type": "תקלת מנוע",
+    "status": "נפתר",
+    "latitude": 32.092,
+    "longitude": 34.877025
   },
   {
     "id": "REQ097",
-    "opened_at": "2025-06-10T13:35:01",
-    "responded_at": "2025-06-10T15:38:01",
-    "region": "ראשון לציון",
-    "issue_type": "נגמר דלק",
-    "status": "נפתר"
+    "opened_at": "2025-05-27T19:56:54",
+    "responded_at": "2025-05-27T21:13:54",
+    "region": "נתניה",
+    "issue_type": "תקלת חשמל",
+    "status": "בטיפול",
+    "latitude": 32.288034,
+    "longitude": 34.863912
   },
   {
     "id": "REQ098",
-    "opened_at": "2025-06-04T12:49:01",
-    "responded_at": "2025-06-04T14:21:01",
-    "region": "ראשון לציון",
-    "issue_type": "פנצ'ר",
-    "status": "נפתר"
+    "opened_at": "2025-06-05T22:32:54",
+    "responded_at": "2025-06-06T01:06:54",
+    "region": "חיפה",
+    "issue_type": "מפתח נעול ברכב",
+    "status": "בוטל",
+    "latitude": 32.838367,
+    "longitude": 35.01905
   },
   {
     "id": "REQ099",
-    "opened_at": "2025-05-23T07:02:01",
-    "responded_at": "2025-05-23T08:27:01",
-    "region": "באר שבע",
-    "issue_type": "מפתח נעול ברכב",
-    "status": "ממתין"
+    "opened_at": "2025-06-07T00:29:54",
+    "responded_at": "2025-06-07T02:48:54",
+    "region": "חיפה",
+    "issue_type": "פנצ'ר",
+    "status": "בטיפול",
+    "latitude": 32.786119,
+    "longitude": 34.963958
   },
   {
     "id": "REQ100",
-    "opened_at": "2025-05-23T15:35:01",
-    "responded_at": "2025-05-23T15:45:01",
-    "region": "נתניה",
-    "issue_type": "מצבר",
-    "status": "בטיפול"
+    "opened_at": "2025-05-24T20:18:54",
+    "responded_at": "2025-05-24T21:25:54",
+    "region": "ראשון לציון",
+    "issue_type": "פנצ'ר",
+    "status": "בטיפול",
+    "latitude": 31.957169,
+    "longitude": 34.76366
   }
 ]
