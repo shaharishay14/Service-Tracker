@@ -5,8 +5,12 @@ import plotly.graph_objects as go
 from datetime import datetime, timedelta
 import json
 import os
+from dotenv import load_dotenv
 from data_analyzer import ServiceDataAnalyzer
 from llm_analyzer import LLMServiceAnalyzer
+
+# טעינת משתני סביבה מקובץ .env
+load_dotenv()
 
 # הגדרת תצורת הדף
 st.set_page_config(
@@ -454,17 +458,77 @@ def main():
     - דוח מקצועי להורדה
     """)
     
-    # הגדרת מפתח API
-    col1, col2 = st.columns([2, 1])
+    # בדיקה אם יש מפתח API בקובץ .env
+    env_api_key = os.getenv('OPENAI_API_KEY')
+    
+    # הגדרת מפתח API ומודל
+    col1, col2, col3 = st.columns([2, 1, 1])
     
     with col1:
-        api_key = st.text_input(
-            "מפתח OpenAI API (אופציונלי - לניתוח מתקדם)",
-            type="password",
-            help="הכנס מפתח OpenAI API לקבלת ניתוח מתקדם עם GPT-4. ללא מפתח תקבל ניתוח בסיסי."
-        )
+        if env_api_key:
+            st.success("✅ **מפתח OpenAI API נמצא בקובץ .env**")
+            # הצגת חלק מהמפתח (מוסווה) לאימות
+            masked_key = env_api_key[:8] + "..." + env_api_key[-4:] if len(env_api_key) > 12 else "***"
+            st.info(f"המערכת תשתמש במפתח: `{masked_key}`")
+            api_key = env_api_key
+            # אפשרות לעקוף את המפתח מהקובץ
+            override_key = st.text_input(
+                "עקוף מפתח (אופציונלי)",
+                type="password",
+                help="השאר ריק כדי להשתמש במפתח מקובץ ה-.env"
+            )
+            if override_key.strip():
+                api_key = override_key
+                st.warning("⚠️ משתמש במפתח שהוכנס במקום זה שבקובץ .env")
+        else:
+            api_key = st.text_input(
+                "מפתח OpenAI API (אופציונלי - לניתוח מתקדם)",
+                type="password",
+                help="הכנס מפתח OpenAI API לקבלת ניתוח מתקדם. ללא מפתח תקבל ניתוח בסיסי."
+            )
+            
+            # הודעה על אפשרות שימוש בקובץ .env
+            with st.expander("💡 טיפ: שימוש בקובץ .env"):
+                st.markdown("""
+                **לשימוש קבוע, מומלץ ליצור קובץ `.env` בתיקיית הפרויקט:**
+                
+                1. צור קובץ בשם `.env` (ללא סיומת)
+                2. הוסף את השורה הבאה:
+                ```
+                OPENAI_API_KEY=sk-your-api-key-here
+                ```
+                3. הפעל מחדש את האפליקציה
+                
+                **יתרונות:**
+                - המפתח נשמר באופן קבוע
+                - לא צריך להכניס אותו בכל פעם
+                - בטוח יותר (הקובץ לא נשלח ל-Git)
+                """)
+                
+                if st.button("📁 צור קובץ .env לדוגמה"):
+                    env_content = "# הכנס את מפתח OpenAI API שלך כאן\nOPENAI_API_KEY=sk-your-api-key-here\n"
+                    st.download_button(
+                        label="💾 הורד קובץ .env לדוגמה",
+                        data=env_content,
+                        file_name=".env",
+                        mime="text/plain"
+                    )
     
     with col2:
+        model_options = {
+            "gpt-4": "GPT-4 (מומלץ)",
+            "gpt-4-turbo": "GPT-4 Turbo",
+            "gpt-3.5-turbo": "GPT-3.5 Turbo (זול יותר)"
+        }
+        
+        selected_model = st.selectbox(
+            "בחר מודל AI:",
+            options=list(model_options.keys()),
+            format_func=lambda x: model_options[x],
+            help="GPT-4 מספק ניתוח מעמיק יותר אך יקר יותר. GPT-3.5 מהיר וחסכוני."
+        )
+    
+    with col3:
         st.markdown("<br>", unsafe_allow_html=True)  # רווח
         analyze_button = st.button(
             "🔍 נתח נתונים",
@@ -474,6 +538,15 @@ def main():
     
     # ביצוע הניתוח
     if analyze_button:
+        # הצגת מידע על המודל שנבחר
+        if api_key:
+            if env_api_key and api_key == env_api_key:
+                st.info(f"🤖 משתמש במודל: {model_options[selected_model]} (מפתח מקובץ .env)")
+            else:
+                st.info(f"🤖 משתמש במודל: {model_options[selected_model]} (מפתח שהוכנס)")
+        else:
+            st.info("🤖 משתמש בניתוח בסיסי (ללא API)")
+            
         with st.spinner("מנתח נתונים ויוצר דוח מקצועי..."):
             try:
                 # יצירת מנתח הנתונים
@@ -481,20 +554,40 @@ def main():
                 analysis_data = data_analyzer.generate_comprehensive_analysis()
                 
                 # יצירת מנתח LLM
-                llm_analyzer = LLMServiceAnalyzer(api_key if api_key else None)
+                llm_analyzer = LLMServiceAnalyzer(
+                    api_key=api_key if api_key else None,
+                    model=selected_model
+                )
                 
                 # ביצוע הניתוח
-                llm_analysis = llm_analyzer.analyze_with_llm(analysis_data)
+                llm_result = llm_analyzer.analyze_with_llm(analysis_data)
                 
                 # הצגת התוצאות
                 st.success("הניתוח הושלם בהצלחה!")
                 
+                # הצגת מידע על סוג הניתוח
+                if llm_result['api_used']:
+                    st.success(f"✅ **ניתוח מתקדם עם AI הושלם!**")
+                    st.info(f"🤖 **מודל שנוצל:** {llm_result['model_used']}")
+                    if llm_result.get('tokens_used'):
+                        st.info(f"🔢 **טוקנים שנוצלו:** {llm_result['tokens_used']}")
+                else:
+                    if llm_result['analysis_type'] == 'basic_fallback':
+                        st.warning("⚠️ **נכשל בחיבור ל-API - מציג ניתוח בסיסי**")
+                        if llm_result.get('error'):
+                            st.error(f"שגיאה: {llm_result['error']}")
+                    elif llm_result['analysis_type'] == 'basic_invalid_key':
+                        st.warning("⚠️ **מפתח API לא תקין - מציג ניתוח בסיסי**")
+                        st.info("💡 וודא שהמפתח מתחיל ב-'sk-' ומכיל לפחות 10 תווים")
+                    else:
+                        st.info("ℹ️ **ניתוח בסיסי (ללא API)**")
+                
                 # הצגת הניתוח
                 st.markdown("### 📊 תוצאות הניתוח")
-                st.markdown(llm_analysis)
+                st.markdown(llm_result['analysis'])
                 
                 # יצירת קובץ דוח להורדה
-                report_content = llm_analyzer.generate_report_file(analysis_data, llm_analysis)
+                report_content = llm_analyzer.generate_report_file(analysis_data, llm_result)
                 
                 # כפתור הורדת הדוח
                 st.download_button(

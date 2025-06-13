@@ -11,20 +11,22 @@ class LLMServiceAnalyzer:
     מחלקה לניתוח נתוני שירות באמצעות LLM ויצירת דוחות מקצועיים
     """
     
-    def __init__(self, api_key: str = None):
+    def __init__(self, api_key: str = None, model: str = "gpt-4"):
         """
-        אתחול המנתח עם מפתח API
+        אתחול המנתח עם מפתח API ומודל
         
         Args:
             api_key (str): מפתח OpenAI API
+            model (str): שם המודל לשימוש (ברירת מחדל: gpt-4)
         """
         self.api_key = api_key or os.getenv('OPENAI_API_KEY')
+        self.model = model
         if self.api_key:
             self.client = OpenAI(api_key=self.api_key)
         else:
             self.client = None
     
-    def analyze_with_llm(self, analysis_data: Dict) -> str:
+    def analyze_with_llm(self, analysis_data: Dict) -> Dict:
         """
         ניתוח הנתונים באמצעות LLM
         
@@ -32,16 +34,34 @@ class LLMServiceAnalyzer:
             analysis_data (Dict): נתוני הניתוח המקיף
         
         Returns:
-            str: דוח מקצועי עם מסקנות והמלצות
+            Dict: מילון עם הדוח והמידע על סוג הניתוח
         """
         if not self.client:
-            return self._generate_fallback_analysis(analysis_data)
+            return {
+                'analysis': self._generate_fallback_analysis(analysis_data),
+                'analysis_type': 'basic',
+                'model_used': None,
+                'api_used': False
+            }
+        
+        # בדיקה שמפתח ה-API תקין
+        if not self.api_key or len(self.api_key.strip()) < 10:
+            return {
+                'analysis': self._generate_fallback_analysis(analysis_data),
+                'analysis_type': 'basic_invalid_key',
+                'model_used': None,
+                'api_used': False,
+                'error': 'מפתח API לא תקין או חסר'
+            }
         
         # הכנת הנתונים לשליחה ל-LLM
         data_summary = self._prepare_data_for_llm(analysis_data)
         
         prompt = f"""
         אתה מנתח נתונים מקצועי המתמחה בניתוח ביצועי שירות לחברות סיוע בדרכים.
+        
+        **התחל את הדוח עם הכותרת הבאה:**
+        "🤖 **ניתוח מתקדם עם בינה מלאכותית - {self.model}**"
         
         נתוני השירות שלפניך:
         {data_summary}
@@ -78,7 +98,7 @@ class LLMServiceAnalyzer:
         
         try:
             response = self.client.chat.completions.create(
-                model="gpt-4",
+                model=self.model,
                 messages=[
                     {"role": "system", "content": "אתה מנתח נתונים מקצועי המתמחה בניתוח ביצועי שירות."},
                     {"role": "user", "content": prompt}
@@ -87,11 +107,23 @@ class LLMServiceAnalyzer:
                 temperature=0.3
             )
             
-            return response.choices[0].message.content
+            return {
+                'analysis': response.choices[0].message.content,
+                'analysis_type': 'llm',
+                'model_used': self.model,
+                'api_used': True,
+                'tokens_used': response.usage.total_tokens if hasattr(response, 'usage') else None
+            }
             
         except Exception as e:
             st.error(f"שגיאה בחיבור ל-OpenAI: {str(e)}")
-            return self._generate_fallback_analysis(analysis_data)
+            return {
+                'analysis': self._generate_fallback_analysis(analysis_data),
+                'analysis_type': 'basic_fallback',
+                'model_used': None,
+                'api_used': False,
+                'error': str(e)
+            }
     
     def _prepare_data_for_llm(self, analysis_data: Dict) -> str:
         """
@@ -146,8 +178,11 @@ class LLMServiceAnalyzer:
         """
         report = []
         
-        report.append("# דוח ניתוח ביצועי שירות")
+        report.append("# דוח ניתוח ביצועי שירות - ניתוח בסיסי")
         report.append(f"תאריך יצירה: {datetime.now().strftime('%d/%m/%Y %H:%M')}")
+        report.append("")
+        report.append("⚠️ **הערה: זהו ניתוח בסיסי שנוצר ללא שימוש ב-API של OpenAI**")
+        report.append("לקבלת ניתוח מתקדם יותר עם תובנות עמוקות, הכנס מפתח OpenAI API.")
         report.append("")
         
         # סיכום מנהלים
@@ -208,13 +243,13 @@ class LLMServiceAnalyzer:
         
         return "\n".join(report)
     
-    def generate_report_file(self, analysis_data: Dict, llm_analysis: str) -> str:
+    def generate_report_file(self, analysis_data: Dict, llm_result: Dict) -> str:
         """
         יצירת קובץ דוח מקצועי להורדה
         
         Args:
             analysis_data (Dict): נתוני הניתוח
-            llm_analysis (str): ניתוח ה-LLM
+            llm_result (Dict): תוצאת הניתוח עם מטא-דאטה
         
         Returns:
             str: תוכן הדוח המלא
@@ -226,10 +261,22 @@ class LLMServiceAnalyzer:
         report_lines.append("דוח ניתוח ביצועי שירות - Service Tracker")
         report_lines.append("=" * 80)
         report_lines.append(f"תאריך יצירה: {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
+        
+        # מידע על סוג הניתוח
+        if llm_result['api_used']:
+            report_lines.append(f"סוג ניתוח: ניתוח מתקדם עם AI")
+            report_lines.append(f"מודל AI: {llm_result['model_used']}")
+            if llm_result.get('tokens_used'):
+                report_lines.append(f"טוקנים שנוצלו: {llm_result['tokens_used']}")
+        else:
+            report_lines.append("סוג ניתוח: ניתוח בסיסי (ללא API)")
+            if llm_result.get('error'):
+                report_lines.append(f"סיבה: {llm_result['error']}")
+        
         report_lines.append("")
         
         # ניתוח LLM
-        report_lines.append(llm_analysis)
+        report_lines.append(llm_result['analysis'])
         report_lines.append("")
         
         # נתונים מפורטים
