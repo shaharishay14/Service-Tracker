@@ -4,6 +4,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 import json
+import os
+from data_analyzer import ServiceDataAnalyzer
+from llm_analyzer import LLMServiceAnalyzer
 
 # הגדרת תצורת הדף
 st.set_page_config(
@@ -436,6 +439,81 @@ def main():
         file_name=f"service_requests_filtered_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
         mime="text/csv"
     )
+    
+    # ניתוח אוטומטי עם LLM
+    st.markdown("---")
+    st.subheader("🤖 ניתוח אוטומטי ומסקנות")
+    
+    st.info("""
+    **ניתוח חכם עם בינה מלאכותית**
+    
+    לחץ על הכפתור למטה כדי לקבל ניתוח מקצועי של הנתונים עם:
+    - זיהוי בעיות ואזורים בעייתיים
+    - המלצות לשיפור ביצועים
+    - תובנות עסקיות מתקדמות
+    - דוח מקצועי להורדה
+    """)
+    
+    # הגדרת מפתח API
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        api_key = st.text_input(
+            "מפתח OpenAI API (אופציונלי - לניתוח מתקדם)",
+            type="password",
+            help="הכנס מפתח OpenAI API לקבלת ניתוח מתקדם עם GPT-4. ללא מפתח תקבל ניתוח בסיסי."
+        )
+    
+    with col2:
+        st.markdown("<br>", unsafe_allow_html=True)  # רווח
+        analyze_button = st.button(
+            "🔍 נתח נתונים",
+            type="primary",
+            use_container_width=True
+        )
+    
+    # ביצוע הניתוח
+    if analyze_button:
+        with st.spinner("מנתח נתונים ויוצר דוח מקצועי..."):
+            try:
+                # יצירת מנתח הנתונים
+                data_analyzer = ServiceDataAnalyzer(filtered_df)
+                analysis_data = data_analyzer.generate_comprehensive_analysis()
+                
+                # יצירת מנתח LLM
+                llm_analyzer = LLMServiceAnalyzer(api_key if api_key else None)
+                
+                # ביצוע הניתוח
+                llm_analysis = llm_analyzer.analyze_with_llm(analysis_data)
+                
+                # הצגת התוצאות
+                st.success("הניתוח הושלם בהצלחה!")
+                
+                # הצגת הניתוח
+                st.markdown("### 📊 תוצאות הניתוח")
+                st.markdown(llm_analysis)
+                
+                # יצירת קובץ דוח להורדה
+                report_content = llm_analyzer.generate_report_file(analysis_data, llm_analysis)
+                
+                # כפתור הורדת הדוח
+                st.download_button(
+                    label="📄 הורד דוח מקצועי",
+                    data=report_content,
+                    file_name=f"service_analysis_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt",
+                    mime="text/plain",
+                    help="הורד דוח מקצועי מלא עם כל הניתוחים והמלצות"
+                )
+                
+                # הצגת תובנות מרכזיות
+                st.markdown("### 💡 תובנות מרכזיות")
+                key_insights = data_analyzer.get_key_insights()
+                for i, insight in enumerate(key_insights, 1):
+                    st.write(f"{i}. {insight}")
+                
+            except Exception as e:
+                st.error(f"שגיאה בניתוח הנתונים: {str(e)}")
+                st.info("נסה שוב או בדוק את מפתח ה-API")
 
 if __name__ == "__main__":
     main() 
