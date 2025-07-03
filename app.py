@@ -466,10 +466,6 @@ def main():
     
     with col1:
         if env_api_key:
-            st.success("✅ **מפתח OpenAI API נמצא בקובץ .env**")
-            # הצגת חלק מהמפתח (מוסווה) לאימות
-            masked_key = env_api_key[:8] + "..." + env_api_key[-4:] if len(env_api_key) > 12 else "***"
-            st.info(f"המערכת תשתמש במפתח: `{masked_key}`")
             api_key = env_api_key
             # אפשרות לעקוף את המפתח מהקובץ
             override_key = st.text_input(
@@ -479,7 +475,6 @@ def main():
             )
             if override_key.strip():
                 api_key = override_key
-                st.warning("⚠️ משתמש במפתח שהוכנס במקום זה שבקובץ .env")
         else:
             api_key = st.text_input(
                 "מפתח OpenAI API (אופציונלי - לניתוח מתקדם)",
